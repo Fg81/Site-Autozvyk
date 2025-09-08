@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --card: hsl(0, 0%, 98.8%);
+  --ring: hsl(0, 0%, 41.96%);
+  --input: hsl(0, 0%, 71%);
+  --muted: hsl(0, 0%, 89%);
+  --accent: hsl(0, 0%, 100%);
+  --border: hsl(0, 0%, 91%);
+  --radius: 0.8rem;
+  --shadow: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 1px 2px -1px hsl(9, 75%, 61% / 0.00);
+  --chart-1: hsl(203.8863, 88.2845%, 53.1373%);
+  --chart-2: hsl(159.7826, 100%, 36.0784%);
+  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --popover: hsl(45, 25%, 97%);
+  --primary: hsl(349, 77%, 52%);
+  --sidebar: hsl(45, 25%, 97%);
+  --spacing: 0.25rem;
+  --font-mono: 'Menlo', monospace;
+  --font-sans: 'Poppins', sans-serif;
+  --secondary: hsl(0, 0%, 77%);
+  --shadow-lg: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 4px 6px -1px hsl(9, 75%, 61% / 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 2px 4px -1px hsl(9, 75%, 61% / 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 1px 2px -1px hsl(9, 75%, 61% / 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 8px 10px -1px hsl(9, 75%, 61% / 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00);
+  --background: hsl(0, 0%, 94%);
+  --font-serif: 'Poppins', sans-serif;
+  --foreground: hsl(0, 0%, 10%);
+  --shadow-2xl: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00);
+  --shadow-2xs: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00);
+  --destructive: hsl(0, 0%, 0%);
+  --sidebar-ring: hsl(9, 75%, 61%);
+  --sidebar-accent: hsl(25, 45%, 80%);
+  --sidebar-border: hsl(45, 15%, 80%);
+  --card-foreground: hsl(0, 0%, 0%);
+  --sidebar-primary: hsl(9, 75%, 61%);
+  --tracking-normal: 0em;
+  --muted-foreground: hsl(0, 0%, 13%);
+  --accent-foreground: hsl(0, 0%, 10.2%);
+  --popover-foreground: hsl(0, 0%, 100%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(20, 14%, 17%);
+  --secondary-foreground: hsl(0, 0%, 10%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent-foreground: hsl(20, 14%, 17%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+}
+
+.dark {
+  --card: hsl(20, 14%, 8%);
+  --ring: hsl(9, 75%, 61%);
+  --input: hsl(20, 14%, 18%);
+  --muted: hsl(20, 14%, 15%);
+  --accent: hsl(25, 45%, 20%);
+  --border: hsl(20, 14%, 15%);
+  --chart-1: hsl(203.8863, 88.2845%, 53.1373%);
+  --chart-2: hsl(159.7826, 100%, 36.0784%);
+  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --popover: hsl(20, 14%, 4%);
+  --primary: hsl(9, 75%, 61%);
+  --sidebar: hsl(20, 14%, 8%);
+  --secondary: hsl(30, 15%, 52%);
+  --background: hsl(20, 14%, 4%);
+  --foreground: hsl(45, 25%, 91%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --sidebar-ring: hsl(9, 75%, 61%);
+  --sidebar-accent: hsl(25, 45%, 20%);
+  --sidebar-border: hsl(20, 14%, 15%);
+  --card-foreground: hsl(45, 25%, 85%);
+  --sidebar-primary: hsl(9, 75%, 61%);
+  --muted-foreground: hsl(45, 15%, 46%);
+  --accent-foreground: hsl(45, 25%, 85%);
+  --popover-foreground: hsl(45, 25%, 91%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(45, 25%, 85%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent-foreground: hsl(45, 25%, 85%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+.gradient-glow {
+  background: linear-gradient(135deg, hsl(9, 75%, 61%) 0%, hsl(356.3033, 90.5579%, 54.3137%) 100%);
+  box-shadow: 0 0 20px hsl(9, 75%, 61% / 0.3);
+}
+
+.audio-wave {
+  background: linear-gradient(90deg, transparent 0%, hsl(9, 75%, 61%) 50%, transparent 100%);
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.hero-pattern {
+  background-image: radial-gradient(circle at 25% 25%, hsl(9, 75%, 61% / 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 75% 75%, hsl(356.3033, 90.5579%, 54.3137% / 0.1) 0%, transparent 50%);
+}
